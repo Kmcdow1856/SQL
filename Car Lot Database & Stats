@@ -1,0 +1,27 @@
+CREATE TABLE car_lot (id INTEGER PRIMARY KEY, make TEXT, model TEXT, color TEXT, price INTEGER);
+
+INSERT INTO car_lot VALUES (1, "Chevy", "Corvette", "Red", 25000);
+INSERT INTO car_lot VALUES (2, "Ford", "Ranger", "Purple", 20000);
+INSERT INTO car_lot VALUES (3, "Toyota", "Prius", "Blue", 15000);
+INSERT INTO car_lot VALUES (4, "Jeep", "Wrangler", "Green", 35000);
+INSERT INTO car_lot VALUES (5, "Hyundai", "Sonata", "Orange", 23000);
+INSERT INTO car_lot VALUES (6, "Cadillac", "CTS", "Black", 45000);
+INSERT INTO car_lot VALUES (7, "Honda", "Accord", "Grey", 26000);
+INSERT INTO car_lot VALUES (8, "Lexus", "Class C", "Silver", 28000);
+INSERT INTO car_lot VALUES (9, "LandRover", "Evoque", "White", 21000);
+INSERT INTO car_lot VALUES (10, "Infiniti", "Q4", "Red", 24000);
+INSERT INTO car_lot VALUES (11, "Chrysler", "Lebaron", "Blue", 25500);
+INSERT INTO car_lot VALUES (12, "Dodge", "Viper", "Black", 25700);
+INSERT INTO car_lot VALUES (13, "Ford", "Focus", "White", 29000);
+INSERT INTO car_lot VALUES (14, "Chevy", "Colorado", "Orange", 38000);
+INSERT INTO car_lot VALUES (15, "Jeep", "Liberty", "Red", 26000);
+
+--What is the average price for each color vehicle?
+SELECT color "COLOR", AVG (price) "AVERAGE PRICE" 
+FROM car_lot 
+GROUP BY color;
+
+--How many of each Make are on the car lot?
+SELECT make "MAKE", COUNT (make) "COUNT" 
+FROM car_lot 
+GROUP BY make;
