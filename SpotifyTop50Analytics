@@ -1,3 +1,6 @@
+Spotify Database:
+https://www.kaggle.com/datasets/equinxx/spotify-top-50-songs-in-2021?select=spotify_top50_2021.csv
+
 --What is the average dancability by artist?
 SELECT artist_name, AVG(danceability) as AverageDanceability
 FROM BIT_DB.Spotifydata
